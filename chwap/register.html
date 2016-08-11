@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta property="qc:admins" content="1604442224721646157633711" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1990 01:01:01 GMT">
+		<META HTTP-EQUIV="Last-Modified" CONTENT="Wed, 26 Feb 1990 02:02:02 GMT">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=1,user-scalable=no"/>
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<title>注册</title>
+		<link href="css/css.css" rel="stylesheet"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/comm.js"></script>		
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<ul>
+					<li><a href="javascript:history.go(-1);"><img src="images/return.png"></a></li>
+					<li><a href="javascript:void(0)">个人资料</a></li>
+					<li><a href="#"></a></li>				
+				</ul>					
+			</div>            
+	    </header>
+	    <div class="login-banner">
+	    	<img src="images/login-banner.jpg">
+	    </div>
+	    <div class="log-in">
+	    	<div class="log-input">
+	    		<p><input type="text" placeholder="请输入您的手机号码" id="phone"/></p>
+	    		<p><input type="text" placeholder="请输入验证码" id="code"><a href="#" class="get-code">获取验证码</a></p>
+	    		<p><input type="password" placeholder="请输入您的密码" id="password" onkeyup="pwStrength(this.value)" onblur="pwStrength(this.value)"/><span class="pass-code"><em class="color active" id="strength_L">弱</em><em class="color" id="strength_M">中</em><em class="color" id="strength_H">强</em></span></p>
+	    	</div>
+	    	<div class="log-button regis">
+	    		<button>立即登录</button>
+	    		<div class="rec consent"><input type="checkbox" /><em></em><span>同意</span><a href="#">《长红注册条款》</a><a href="#">《长红平台消费者规则》</a></div>
+	    	</div>
+	    </div>
+	</body>
+</html>

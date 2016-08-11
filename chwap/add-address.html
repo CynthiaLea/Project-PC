@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta property="qc:admins" content="1604442224721646157633711" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1990 01:01:01 GMT">
+		<META HTTP-EQUIV="Last-Modified" CONTENT="Wed, 26 Feb 1990 02:02:02 GMT">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=1,user-scalable=no"/>
+		<meta content="telephone=no, address=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<title>新增收货地址</title>
+		<link href="css/css.css" rel="stylesheet"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/comm.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".confirm").click(function(){
+					if($("#region").val()==""){
+						alert("地区不能为空！");
+						return;
+					}
+					if($("#street").val()==""){
+						alert("街道不能为空！");
+						return;
+					}
+					if($("#address").val()==""){
+						alert("地区不能为空！");
+						return;
+					}
+					if($("#consignee").val()==""){
+						alert("请输入收货人姓名！");
+						return;
+					}
+					if($("#phonenub").val()==""){
+						alert("联系电话不能为空！");
+						return;
+					}
+					if($("#phonenub").val().match(/^((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)$/)){
+						alert("电话号码格式不正确！");							
+					}
+					
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<ul>
+					<li><a href="javascript:history.go(-1);"><img src="images/return.png"></a></li>
+					<li><a href="javascript:void(0)">新增收货地址</a></li>
+					<li><a href="#"></a></li>				
+				</ul>					
+			</div>            
+	    </header>
+	    <div class="insert-address">
+	    	<form method="post">
+	    		<p><span>所在地区：</span><input type="text" placeholder="请选择所在地区" id="region"><em><a href="region.html"><img src="images/right.png"><a></em></p>
+	    		<p><span>所在街道：</span><input type="text" placeholder="请选择街道" id="street"><em><a href="#"><img src="images/right.png"><a></em></p>
+	    		<p><span>详细地址：</span><input type="text" placeholder="请输入详细地址" id="address"></p>
+	    		<p><span>收货人：</span><input type="text" placeholder="请输入收货人姓名" id="consignee"></p>
+	    		<p><span>联系电话：</span><input type="text" placeholder="请输入电话号码" id="phonenub"></p>
+	    		<p><span>备注：</span><input type="text" placeholder="请输入其他信息" id="text"></p>
+	    		<div class="confirm in-add"><button class="brand">保存</button></div>
+	    	</form>
+	    </div>
+	</body>
+</html>
