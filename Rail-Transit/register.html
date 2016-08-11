@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<title>中国城市轨道交通年度报告</title>
+		<link href="css/css.css" type="text/css" rel="stylesheet" />
+		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script src="js/jquery.validate.min.js"></script>
+	</head>
+	<body>
+	<div class="right-menu">
+		<ul>
+			<li id="up"><a href="javascript:void(0);" class="border up" title="返回顶部"><img src="images/up.png"></a></li>
+			<li id="login">
+				<a href="javascript:void(0);" class="border lo-click login" title="登录页面"><img src="images/login.png"></a>					
+			</li>
+		</ul>
+        <div class="sign-in text-left">
+            <div class="sign-wrapp">
+                <a href="javascript:void(0)" class="closes"><img src="images/close.png"></a>
+                <h2>会员登录 SIGN IN</h2>
+                <p><input type="text" placeholder="您的账号" id="username" class="brand"></p>
+                <p><input type="password" placeholder="您的密码" id="password" class="brand"></p>
+                <p class="forget"><input type="checkbox"><label>记住我的登录状态</label><a href="forget-pwd.html">忘记密码？</a></p>
+                <p><a href="#" class="login">登录</a><a href="register.html" class="register">注册</a></p>
+            </div>
+        </div>
+	</div>
+	<header class="site-header navbar-fixed-top" id="header">		
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo-wrapper">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logo.jpg" />
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="annual-intro.html">年报介绍</a></li>
+                            <li><a href="dynamic.html">年报动态</a></li>
+                            <li><a href="company-equipment.html">企业风采</a></li>
+                            <li><a href="download.html">下载中心</a></li>
+                            <li><a href="expert.html">专家库</a></li>
+                            <li class="fix"><a href="business.html">商务合作</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+    </header>
+    <div class="none"></div>
+    <div id="banner">
+    	<div class="banner-img"><img src="images/cooperate-banner.jpg"></div>
+    </div>
+    <section>
+    	<div class="user-register">
+    		<div class="container">
+    			<div class="register-wrapp row-section">
+    				<div class="register-head"><p><img src="images/register-icon.png"><span>新用户注册</span></p></div>
+    				<div class="register-form">
+    					<div class="register-title">
+    						<span class="s1"><em>创建您的账号</em>（<i>以下信息*为必填项，请认真填写！</i>）</span>
+    						<span class="s2"><em>已有账号？</em><a href="#">请登录</a></i></span>
+    						<p class="clear"></p>
+    					</div>
+    					<form class="form" method="post" id="myform">
+    						<div class="form-input">
+    							<span><i>*</i>用户名</span><input type="text" name="username"/><em>请输入1-16个英文或数字组成的字符,首字必须为英文字符</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>密码</span><input type="password" name="password"/><em>5－15 个字符，包括英文字母、中文、数字、下划线</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>重复密码</span><input type="password" name="confirm_password"/><em>请再次输入设置好的的密码</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>您的姓名</span><input type="text" name="name"/><em>请填写您的真实姓名</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>电子邮箱</span><input type="email" name="email"/><em>请填写您真实的邮件，用于密码找回和相关通知服务</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i></i>您的年龄</span><input type="text" name="ages"/><em>请填写您的真实年龄</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i></i>您的国籍</span><input type="text" name="nationality"/><em>请填写您的国籍</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>单位名称</span><input type="text" name="unit"/><em>请填写您的单位名称</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>行业属性</span><select name="business" class="{required:true}"><option selected="selected"></option><option>it</option></select><em>请选择您企业所属的行业</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i></i>所在部门</span><input type="text" name="department"/><em>您所在的部门</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i></i>您的职务</span><input type="text" name="position"/><em>您的职位</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>联系地址</span><input type="text" name="address"/><em>为便于通讯,请填写您的联系地址</em>
+    						</div>
+    						<div class="form-input">
+    							<span><i>*</i>联系电话</span><input type="tel" name="telphone"/><em>为便于联系,请填写您的联系电话</em>
+    						</div>
+    						<div class="form-input">
+    							<span></span><input type="checkbox"/><a href="#">同意服务条款（先看条款？）</a>
+    						</div>
+    						<div class="form-input">
+    							<span></span><button class="confirm brand">确认注册</button>
+    						</div>
+    					</form>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <footer class="footer">
+    	<div class="copy text-center">
+    		国城市轨道交通年度报告 版权所有   Copyright 2000-2014 MetroReport.cn All rights reserved  技术支持：<a href="#">魔方视维</a>
+    	</div>
+    </footer>
+     <script>
+	$().ready(function() {
+		// validate signup form on keyup and submit
+		$("#myform").validate({
+			errorPlacement: function(error, element){
+	            var error_td = element.parent('div');
+	            error_td.find('label').hide();
+	            error_td.append(error);
+	        },
+	        submitHandler:function(form){
+	            ajaxpost('register_form', '', '', 'onerror') 
+	        },
+			rules: {
+				username: {
+					required: true,
+					minlength: 2,
+				},
+				telphone: {
+					required: true,
+					telphone: true,
+				},
+				email: {
+					required: true,
+					email: true,
+				},
+				password: {
+			        required: true,
+			        minlength: 5
+			      },
+			    confirm_password: {
+			        required: true,
+			        minlength: 5,
+			        equalTo: "#password"
+			      },
+			    name: {
+					required: true,
+				},
+			    unit: {
+					required: true,
+				},
+			    address: {
+					required: true,
+					minlength: 2,
+				},
+				demand:{
+					required:true,
+				},
+				topic: {
+					required: "#newsletter:checked",
+					minlength: 2
+				},
+				agree: "required"
+			},
+			messages: {				
+				username: {
+					required: "用户名不能为空！",
+					minlength: "用户名不能少于两个字"
+				},
+				telphone: {
+					required: "电话号码不能为空！",
+					telphone: "电话号码不正确！"
+				},
+				password: {
+			        required: "请输入密码",
+			        minlength: "密码长度不能小于 5 个字母"
+			    },
+				confirm_password: {
+			        required: "请输入密码",
+			        minlength: "密码长度不能小于 5 个字母",
+			        equalTo: "两次密码输入不一致"
+			    },
+			    name: {
+					required: "请填写您的真实姓名",
+				},
+			    unit: {
+					required: "请填写单位名称",
+				},
+			    address: {
+			    	required:"请填写您的联系地址",
+			    	minlength:"地址字数要大于两位",
+			    },
+				email: {
+				    required: "请输入Email地址",
+				    email: "请输入正确的email地址"				    
+				},
+			}
+		});
+		$.validator.addMethod("telphone", function(value, element, params) {
+			//5~10位数字和字母的组合
+			var phone = /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+			return this.optional(element) || phone.test(value); 
+		}, $.validator.format("电话号码不正确"));		
+		//code to hide topic selection, disable for demo
+		var newsletter = $("#newsletter");
+		// newsletter topics are optional, hide at first
+		var inital = newsletter.is(":checked");
+		var topics = $("#newsletter_topics")[inital ? "removeClass" : "addClass"]("gray");
+		var topicInputs = topics.find("input").attr("disabled", !inital);
+		// show when newsletter is checked
+		newsletter.click(function() {
+			topics[this.checked ? "removeClass" : "addClass"]("gray");
+			topicInputs.attr("disabled", !this.checked);
+		});
+	});
+	</script>
+    <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+    <script src="js/commn.js"></script>	
+	</body>
+</html>
