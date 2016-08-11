@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.jqzoom.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<script>
+			$(document).ready(function(){
+				$(".jqzoom").jqueryzoom({
+							xzoom: 250, //zooming div default width(default width value is 200)
+							yzoom: 250, //zooming div default width(default height value is 200)
+							offset: 10, //zooming div default offset(default offset value is 10)
+							position: "right" //zooming div position(default position value is "right")
+				});
+			});
+		</script>
+		<style>
+			.p_img img{width: 100px;height: 100px;}
+		</style>
+	</head>
+	<body>
+		<div class="p_img jqzoom"><img src="images/shoe4_small.jpg" alt="scarpa" jqimg="images/shoe4_big.jpg"></div>
+	</body>
+</html>
