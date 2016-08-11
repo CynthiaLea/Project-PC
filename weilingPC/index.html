@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+<title>微粼首页</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+<link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet" />
+<link href="css/swiper.min.css" type="text/css" rel="stylesheet"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/commn.js"></script>
+<script>
+$(document).ready(function(e) {
+  $('.carousel').carousel({
+  interval: 4000
+});
+$('#myCarousel').carousel({
+  interval: 4000
+})
+$('[id^=carousel-selector-]').click( function(){
+		  var id_selector = $(this).attr("id");
+		  var id = id_selector.substr(id_selector.length -1);
+		  id = parseInt(id);
+		  $('#myCarousel').carousel(id);
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $(this).addClass('selected');
+		});
+ 
+		
+		$('#myCarousel').on('slid', function (e) {
+		  var id = $('.item.active').data('slide-number');
+		  id = parseInt(id);
+		  $('[id^=carousel-selector-]').removeClass('selected');
+		  $('[id=carousel-selector-'+id+']').addClass('selected');
+		});
+		
+});
+</script>
+
+</head>
+
+<body>
+    <div class="contact">
+    	<div class="back-wrapp"></div>       
+        <div class="contact-us">
+        	<div class="close_btn"><a href="javasript:void(0)">X</a></div>
+            <div class="c_img">
+            	<div class="touch_me"><span><img src="images/cont.png" /><p>快速联系我们</p></span><i><img src="images/address_big.png" /><p>我们的地址</p></i></div>
+                <div class="input-cont">
+                	<div class="inpu-left">
+                        <form method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">name</span>
+                                <input type="text" class="form-control" placeholder="姓名" required="required" aria-describedby="basic-addon1">
+                            </div>
+                             <div class="input-group">
+                                <span class="input-group-addon com" id="basic-addon2">company</span>
+                                <input type="text" class="form-control" placeholder="公司名字" required="required" aria-describedby="basic-addon2">
+                            </div>
+                             <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon3">QQ</span>
+                                <input type="text" class="form-control" placeholder="QQ号码" pattern="^[1-9][0-9]{4,9}$" required="required" aria-describedby="basic-addon3">
+                            </div>
+                             <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon4">e-mail</span>
+                                <input type="email" class="form-control" placeholder="邮箱地址" required="required" aria-describedby="basic-addon4">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="inpu-right">
+                    	<div class="input-group">
+                            <span class="input-group-addon" id="basic-addon5">write</span>
+                            <textarea class="required" placeholder="请输入您要咨询的内容" aria-describedby="basic-addon5"></textarea>                            
+                        </div>
+                        <div class="input-group">
+                        	<input type="submit" value="SEND" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	 <header class="site-header" id="top"><!-- class="site-header" id="top"-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo-wrapper">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logo.png" />
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html" class="green">微粼首页</a></li>
+                            <li><a href="about_us.html">关于我们</a></li>
+                            <li><a href="custom_solutions.html">方案定制</a></li>
+                            <li><a href="application.html">行业应用</a></li>
+                            <li><a href="case.html">经典案例</a></li>
+                            <li><a href="client_list.html">客户名录</a></li>
+                            <li><a href="server.html">服务中心</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+        <!-- <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="brand" href="index.html" target="_parent"><img src="images/logo.png" /></a>
+              <nav class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li><a href="index.html" class="green">微粼首页</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                    <li><a href="custom_solutions.html">方案定制</a></li>
+                    <li><a href="application.html">行业应用</a></li>
+                    <li><a href="case.html">经典案例</a></li>
+                    <li><a href="client_list.html">客户名录</a></li>
+                    <li><a href="server.html">服务中心</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+   -->
+     </header>
+    
+     <div id="big-banner">
+     	<div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/banner.jpg" /></div>
+                <div class="swiper-slide"><img src="images/index_banner.jpg"/></div>
+                <div class="swiper-slide"><img src="images/1.jpg" /></div>
+                <div class="swiper-slide"><img src="images/2.jpg" /></div>
+                <div class="swiper-slide"><img src="images/5.jpg" /></div>
+            </div>
+        </div>
+        <div class="login">
+            <h1>用户登录</h1>
+            <form method="post">
+                <div>
+                    <label>用户名：</label><input type="text" id="username" required="required"/>
+                    <p class="user_verify"><i>*</i><span>请输入用户名</span></p>
+                    <label>密码：</label><input type="password" id="password"/>
+                    <p class="pwd_verify"><i>*</i><span>请输入密码</span></p>
+                    <label></label><input type="checkbox" /><span>记住我的登录状态</span>
+                </div>
+               <div class="login_in"><label></label><input type="submit" value="登录" /></div>
+            </form>
+        </div>
+    </div>
+    
+    <section id="advantage">
+    	<div class="rows">
+        	<div class="advant_title">
+           	    <div class="advant_head">
+                    <dl>
+                        <dt>
+                            <h1><span>ADVANTAGE</span><p>微粼优势</p></h1>
+                        </dt>
+                         <dd>
+                            <p>“微粼”是珠海市朗捷软件科技有限公司组建内部技术团队，精心打造的一支面向微信公众服务平台功能定制开发、服务托管、运营于一体的旗下品牌。“微粼”基础业务涵盖地产、医疗休闲娱乐、教育培训、零售业、法律咨询行业、美容美发、餐馆酒店等。根据各个行业特点，“微粼”量身定造的功能模块，为相关行业微信推广应用提供整合服务。</p>	
+                         </dd>
+                    </dl>
+                    <div class="hr"></div>
+                    <div class="hr_green"></div>
+                </div>
+                
+                <div class="advant_wrapp">
+                	<ul>
+                    	<li><div class="advant_all"><div class="triangle_up"></div><div class="columns"><i><img src="images/advantage_1.png" /></i><h3>低成本</h3><p>不用背负高昂的宣传成本支出，可达到相应的推广传播宽度</p></div><div class="triangle_down"></div></div></li>
+                        <li><div class="advant_all"><div class="triangle_up"></div><div class="columns"><i><img src="images/advantage_2.png" /></i><h3>高折射</h3><p>用户无需安装下载APP即可收到推送信息以及进行移动端信息交互体验。</p></div><div class="triangle_down"></div></div></li>
+                        <li><div class="advant_all"><div class="triangle_up"></div><div class="columns"><i><img src="images/advantage_3.png" /></i><h3>信息精准投放</h3><p>更精准的数据统计，提供用户统计，让您时刻了解粉丝数量，制定营销策略。</p></div><div class="triangle_down"></div></div></li>
+                        <li><div class="advant_all"><div class="triangle_up"></div><div class="columns"><i><img src="images/advantage_4.png" /></i><h3>互动性强</h3><p>轻量级的系统，更符合客户碎片式的阅读资讯习惯，功能强大的交互体验，助您业务营销更得心应手。</p></div><div class="triangle_down"></div></div></li>
+                        <li><div class="advant_all"><div class="triangle_up"></div><div class="columns"><i><img src="images/advantage_5.png" /></i><h3>易于推广传播</h3><p>精美的风格渲染，增强企业机构对外的拓展形象，随时随地的二维码扫描关注，让您的潜在粉丝激增。</p></div><div class="triangle_down"></div></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="app">
+   		<div class="rows">
+            <div class="business_app">
+                 <div class="advant_head white">
+                        <dl>
+                            <dt>
+                                <h1><span>APPLICAITON</span><p>行业应用</p></h1>
+                            </dt>
+                        </dl>
+                        <div class="hr"></div>
+                        <div class="hr_green"></div>
+                </div>
+                <div class="app_list">
+                	<ul>
+                   	  <li class="app-active"><a href="#app_1"><img src="images/app1.png" /></a><p>餐饮外卖</p></li>
+                      <li><a href="#app_2"><img src="images/app2.png" /></a><p>房地产</p></li>
+                      <li><a href="#"><img src="images/app3.png" /></a><p>美容美发</p></li>
+                      <li><a href="#"><img src="images/app4.png" /></a><p>医疗就医</p></li>
+                   	  <li><a href="#"><img src="images/app5.png" /></a><p>教育培训</p></li>
+                      <li><a href="#"><img src="images/app6.png" /></a><p>商超零售</p></li>
+                      <li><a href="#"><img src="images/app7.png" /></a><p>微企业</p></li>
+                      <li><a href="#"><img src="images/app8.png" /></a><p>桑拿浴足</p></li>
+                   	  <li><a href="#"><img src="images/app9.png" /></a><p>旅游景区</p></li>
+                      <li><a href="#"><img src="images/app10.png" /></a><p>律师行业</p></li>
+                      <li><a href="#"><img src="images/app11.png" /></a><p>KTV</p></li>
+                      <li><a href="#"><img src="images/app12.png" /></a><p>酒店行业</p></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="business_intr">
+                 <div class="app_hide block" id="app_1">
+                    <div class="business_cont">
+                        <dd>
+                            <dl>餐馆介绍</dl>
+                            <dl>菜品介绍</dl>
+                            <dl>预订桌位</dl>
+                            <dl>点餐</dl>
+                            <dl>外卖下单</dl>
+                        </dd>
+                    </div>
+                    <div class="business_show">
+                        <div class="business_img">
+                            <div class="show_img">                           		
+                                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                                    
+                                      <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                          <img src="images/app_1.jpg" alt="First slide">
+                                        </div>
+                                        <div class="item">
+                                          <img src="images/com_2.jpg" alt="Second slide">
+                                        </div>
+                                         <div class="item">
+                                          <img src="images/com_3.jpg" alt="Second slide">
+                                        </div>
+                                      </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="app_hide">
+                    <div class="business_cont" id="app_2">
+                        <dd>
+                            <dl>餐馆介绍</dl>
+                            <dl>菜品介绍</dl>
+                            <dl>预订桌位</dl>
+                            <dl>点餐</dl>
+                            <dl>外卖下单</dl>
+                        </dd>
+                    </div>
+                    <div class="business_show">
+                        <div class="business_img">
+                            <div class="show_img">                           		
+                                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">                                    
+                                      <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                          <img src="images/com_5.jpg" alt="First slide">
+                                        </div>
+                                        <div class="item">
+                                          <img src="images/com_4.jpg" alt="Second slide">
+                                        </div>
+                                         <div class="item">
+                                          <img src="images/com_3.jpg" alt="Second slide">
+                                        </div>
+                                      </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="business_intr">
+                 <div class="app_hide" id="app_3">
+                    <div class="business_cont">
+                        <dd>
+                            <dl>餐馆介绍</dl>
+                            <dl>菜品介绍</dl>
+                            <dl>预订桌位</dl>
+                            <dl>点餐</dl>
+                            <dl>外卖下单</dl>
+                        </dd>
+                    </div>
+                    <div class="business_show">
+                        <div class="business_img">
+                            <div class="show_img"><img src="images/com_3.jpg" /></div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        	
+        </div> 
+    </section>
+    <section id="custom-made" class="custom-made">
+    	<div class="rows">
+        	<div class="cont_wrapp">
+            	<div class="custom_function">
+                	<div class="advant_head">
+                        <dl>
+                            <dt>
+                                <h1><span>Customization</span><p>功能定制</p></h1>
+                            </dt>
+                        </dl>
+                        <div class="hr"></div>
+                        <div class="hr_green"></div>
+                	</div>
+                    <div class="group">
+                   	   <form method="post">
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon1"><img src="images/user.png" /></span>
+                              <input type="text" class="form-control" placeholder="姓名" required="required" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon2"><img src="images/phone.png" /></span>
+                              <input type="text" class="form-control" placeholder="电话" required="required" pattern="(\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$" aria-describedby="basic-addon2">
+                            </div>
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon3"><img src="images/qq.png" /></span>
+                              <input type="text" class="form-control" placeholder="QQ" pattern="^[1-9][0-9]{4,9}$" required="required" aria-describedby="basic-addon3">
+                            </div>
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon4"><img src="images/company.png" /></span>
+                              <input type="text" class="form-control" placeholder="公司名称" required="required" aria-describedby="basic-addon4">
+                            </div>
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon5"><img src="images/address.png" /></span>
+                              <input type="text" class="form-control" placeholder="公司地址" required="required" aria-describedby="basic-addon5">
+                            </div>
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon6"><img src="images/type.png" /></span>
+                              <!--<input type="text" class="form-control" placeholder="行业类别" aria-describedby="basic-addon6">-->
+                              <select class="form-control" aria-describedby="basic-addon6">
+                              	<option select="select">行业类别</option>
+                              </select>
+                            </div>
+                             <div class="input-group input-group-lg">
+                              <span class="input-group-addon" id="basic-addon7"><img src="images/mess.png" /></span>
+                              <textarea class="form-control" aria-describedby="basic-addon7" placeholder="请描述您要定制的功能"></textarea>
+                            </div>
+                            <div class="input-group input-group-sm">
+                            	<input type="submit" value="提交" aria-describedby="basic-addon6"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="cont_us">
+                	<div class="advant_head">
+                        <dl>
+                            <dt>
+                                <h1><span>Contact WEILIN</span><p>联系微粼</p></h1>
+                            </dt>
+                        </dl>
+                        <div class="hr"></div>
+                        <div class="hr_green"></div>
+               	    </div>
+                    <div class="cont_wrap">
+                    	<div class="contact_us">
+                        	<dl>
+                            	<dt><span><img src="images/home.png" /></span></dt>
+                                <dd>
+                                	<p>寻找我们:</p>
+                                    <span>珠海市香洲区夏美路128号金龙大厦1405</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="contact_us">
+                        	<dl>
+                            	<dt><span><img src="images/qq_cont.png" /></span></dt>
+                                <dd>
+                                	<p>QQ:</p>
+                                    <span>178487962&nbsp;123456789&nbsp;123456789</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="contact_us">
+                        	<dl>
+                            	<dt><span><img src="images/e_mail.png" /></span></dt>
+                                <dd>
+                                	<p>邮箱:</p>
+                                    <span><a href="mailto:director@zhlarge.com">director@zhlarge.com</a></span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="contact_us">
+                        	<dl>
+                            	<dt><span><img src="images/tel.png" /></span></dt>
+                                <dd>
+                                	<p>全国热线:</p>
+                                    <span>珠海市香洲区夏美路128号金龙大厦1405</span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="footer">
+    	<div class="footer_wrapp">
+        	<p>Copyright © 2011-2014 <a href=">www.weilin.com">www.weilin.com</a>. All Rights Reserved <a href=">www.weilin.com">微粼</a> 粤ICP备13021836号-1</p>
+        </div>
+    </footer>
+<script src="js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+	loop: true,
+	effect: 'fade',
+  autoplay: 5000,
+});
+</script>
+</body>
+</html>

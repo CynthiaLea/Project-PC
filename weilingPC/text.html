@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>try</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+  		$(".hidden").hide();
+  		$("a").mouseenter(function(){
+  			var aname=$(this).attr("name");
+  			$("div[id='"+aname+"']").show();
+  			$("div[id!='"+aname+"']").hide();
+  		});
+  		
+});
+	</script>
+</head>
+<body>
+	<nav>
+	  <a href="javascript:void(0);" name="one">链接1</a> 
+	  <a href="javascript:void(0);" name="two" >链接2</a> 
+	  <a href="javascript:void(0)"name="three" >链接3</a> 
+	  <a href="javascript:void(0)" name="four" >链接4</a>
+	</nav>
+	<div id="one">链接1对应的div1</div>
+	<div id="two" class="hidden">链接2对应的div2</div>
+	<div id="three" class="hidden">链接3对应的div3</div>
+	<div id="four" class="hidden">链接4对应的div4</div>
+</body>
+<ml>
