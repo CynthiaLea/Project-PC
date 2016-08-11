@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<title>龙眼传媒</title>
+		<link href="css/css.css" type="text/css" rel="stylesheet" />
+		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/commn.js"></script>		
+        <!--引用百度地图API-->
+		<style type="text/css">
+		    html,body{margin:0;padding:0;}
+		    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+		    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+		</style>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	</head>
+	<body>
+	<header class="site-header" id="header">
+		<div class="cont-us">
+			<div class="container">
+				<div class="tel-phone"><img src="images/tel.png"><span>TEL：<a href="tel:400-888-8888">400-888-8888</a><a href="tel:0756-888888">0756-888888</a></span></div>
+				<div class="cont-menu">
+					<ul>
+						<li><a href="javascript:void(0)" class="brand"><img src="images/iconfont-weixin.png"></a><div class="contact-show"><img src="images/weixin.jpg"></div></li>
+						<li><a href="javascript:void(0)" class="brand"><img src="images/iconfont-qq.png"></a>
+							<div class="qq-show">
+								<ul>
+									<li><a href="#">客服一</a></li>
+									<li><a href="#">客服二</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:void(0)" class="brand"><img src="images/iconfont-001.png"></a></li>
+					</ul>					
+				</div>
+			</div>
+		</div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo-wrapper">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/logo.jpg" />
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html" class="purple">首页</a></li>
+                            <li><a href="about-us.html">关于我们</a></li>
+                            <li><a href="live.html">直播在线</a></li>
+                            <li><a href="programmes.html">节目预告</a></li>
+                            <li><a href="great.html">场上精彩</a></li>
+                            <li><a href="advertisement.html">广告投放</a></li>
+                            <li class="active"><a href="contact-us.html">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+     	<div class="ban-wrapp">
+     		<img src="images/contact-banner.jpg">
+     	</div>
+    </div>
+    <section>
+    	<div class="box-wrapp great">
+    		<div class="container">
+    			<div class="box-header text-center">
+    				<div class="box-wra">
+    					<div class="row">
+    						<div class="col-md-6 text-right">
+    							<div class="box-img"><img src="images/contact-icon.png"></div>
+    						</div>
+    						<div class="col-md-6 text-left">
+    							<div class="box-title"><h4>联系我们</h4><P><i>C</i>ONTACT US</P></div>
+    						</div>
+    					</div>
+	    			</div>
+	    		</div>
+	    		<div class="contact-us">
+	    			<div class="row">
+	    				<div class="col-md-4 col-xs-12">
+	    					<div class="cont-content">
+	    						<h2>佛山龙眼传媒科技有限公司</h2>
+	    						<P><span>联系人：</span><i>谢志江</i></P>
+                                <P><span>服务热线：</span><i><a href="tel:13802636829">13802636829</a></i></P>
+                                <P><span>业务热线：</span><i><a href="tel:13802636829">13802636829</a><em>（谢生）</em></i></P>
+                                <P><span>邮箱：</span><i><a href="mailto:wanglina@stek.cn">wanglina@stek.cn</a></i></P>
+                                <P><span>地址：</span><i>广东省佛山市南海区丹灶镇金石工业园生态路10号索戴包装有限公司</i></p>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-8 col-xs-12">
+	    					<div class="cont-table">
+	    						<form id="myform" method="post" action="index.html">
+		    						<div class="table-all">
+			    						<div class="cont-input left-input">
+			    							<input type="text" name="username" placeholder="姓名" id="username" class="brand">
+			    						</div>
+			    						<div class="cont-input right-input">
+			    							<input type="text" placeholder="电话" name="telphone"  maxlength="14" name="phone"id="telphone" class="brand">
+			    						</div>
+		    						</div>
+		    						<div class="table-all">
+			    						<div class="cont-input left-input">
+			    							<input type="text" placeholder="电子邮箱" name="email" remote="emails.action" size="20" id="email" class="brand">
+			    						</div>
+			    						<div class="cont-input right-input">
+			    							<input type="text" placeholder="QQ" id="qq" name="qq" class="brand">
+			    						</div>
+		    						</div>
+		    						<div class="cont-input"><input type="text" placeholder="居住地址" name="address" id="address" class="brand"></div>
+		    						<div class="cont-input">
+		    							<textarea placeholder="留言板内容" id="content" class="brand"></textarea>
+		    							<button class="send-msg">发送</button>
+		    						</div>
+	    						</form>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="map" id="map">	    			
+                         <!--百度地图容器-->  						
+  						<div style="width:100%;height:600px;border:#ccc solid 1px;" id="dituContent"></div>
+  						<script type="text/javascript">
+						    //创建和初始化地图函数：
+						    function initMap(){
+						        createMap();//创建地图
+						        setMapEvent();//设置地图事件
+						        addMapControl();//向地图添加控件
+						        addMarker();//向地图中添加marker
+						    }
+						    
+						    //创建地图函数：
+						    function createMap(){
+						        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+						        var point = new BMap.Point(112.893098,23.098334);//定义一个中心点坐标
+						        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+						        window.map = map;//将map变量存储在全局
+						    }
+						    
+						    //地图事件设置函数：
+						    function setMapEvent(){
+						        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+						        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+						        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+						        map.enableKeyboard();//启用键盘上下左右键移动地图
+						    }
+						    
+						    //地图控件添加函数：
+						    function addMapControl(){
+						        //向地图中添加缩放控件
+							var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+							map.addControl(ctrl_nav);
+						        //向地图中添加缩略图控件
+							var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+							map.addControl(ctrl_ove);
+						        //向地图中添加比例尺控件
+							var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+							map.addControl(ctrl_sca);
+						    }
+						    
+						    //标注点数组
+						    var markerArr = [{title:"佛山龙眼传媒科技有限公司",content:"龙眼传媒，颠覆性的数字电视传媒",point:"112.89224|23.097271",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+								 ];
+						    //创建marker
+						    function addMarker(){
+						        for(var i=0;i<markerArr.length;i++){
+						            var json = markerArr[i];
+						            var p0 = json.point.split("|")[0];
+						            var p1 = json.point.split("|")[1];
+						            var point = new BMap.Point(p0,p1);
+									var iconImg = createIcon(json.icon);
+						            var marker = new BMap.Marker(point,{icon:iconImg});
+									var iw = createInfoWindow(i);
+									var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+									marker.setLabel(label);
+						            map.addOverlay(marker);
+						            label.setStyle({
+						                        borderColor:"#808080",
+						                        color:"#333",
+						                        cursor:"pointer"
+						            });
+									
+									(function(){
+										var index = i;
+										var _iw = createInfoWindow(i);
+										var _marker = marker;
+										_marker.addEventListener("click",function(){
+										    this.openInfoWindow(_iw);
+									    });
+									    _iw.addEventListener("open",function(){
+										    _marker.getLabel().hide();
+									    })
+									    _iw.addEventListener("close",function(){
+										    _marker.getLabel().show();
+									    })
+										label.addEventListener("click",function(){
+										    _marker.openInfoWindow(_iw);
+									    })
+										if(!!json.isOpen){
+											label.hide();
+											_marker.openInfoWindow(_iw);
+										}
+									})()
+						        }
+						    }
+						    //创建InfoWindow
+						    function createInfoWindow(i){
+						        var json = markerArr[i];
+						        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+						        return iw;
+						    }
+						    //创建一个Icon
+						    function createIcon(json){
+						        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+						        return icon;
+						    }
+						    
+						    initMap();//创建和初始化地图
+						</script>
+	    		</div>
+    		</div>
+    	</div>    	
+    </section>
+    <footer>
+    	<div class="footer-wrapp">
+    		<div class="container">
+    			<div class="part-cont">
+    				<div class="row">
+    					<div class="col-md-6">
+    						<div class="partner">
+    							<div class="part-title">    								
+    								<div class="p"><img src="images/p.png"></div>    									
+    								<div class="part-word">
+		    							<h5>合作伙伴<small>ARTNER</small></h5>
+		    							<p><img src="images/pata.png"><span>因为有你们，我们才能走的更远</span><img src="images/pata.png"></p>
+		    						</div>
+    								<a href="javascript:void(0)" class="more-pata more-click"><img src="images/more.png"></a>
+    								<p class="clear"></p>
+    							</div>
+    							<div class="part-main">
+    								<div class="part-img hide-content">
+    									<ul>
+    										<li><div class="trademark-img"><img src="images/trademark-img1.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img2.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img3.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img4.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img5.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img6.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img7.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img8.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img9.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img10.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img11.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img12.png"></div></li>
+    										<p class="clear"></p>
+    									</ul>
+    								</div>
+    								<div class="part-img">
+    									<ul>
+    										<li><div class="trademark-img"><img src="images/trademark-img1.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img2.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img3.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img4.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img5.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img6.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img7.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img8.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img9.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img10.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img11.png"></div></li>
+    										<li><div class="trademark-img"><img src="images/trademark-img12.png"></div></li>
+    										<p class="clear"></p>
+    									</ul>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<div class="col-md-6">
+    						<div class="partner">
+    							<div class="part-title">    								
+    								<div class="p"><img src="images/p.png"></div>    									
+    								<div class="part-word">
+		    							<h5>联系我们<small>CONTACT US</small></h5>
+		    							<p><span>真诚为您服务</span></p>
+		    						</div>
+    								<a href="javascript:void(0)" class="more-pata car"><img src="images/car.png"></a>
+    								<p class="clear"></p>
+    							</div>
+    							<div class="part-main">
+                                	<div class="row">
+                                    	<div class="col-md-8">
+                                        	<div class="cont-info">
+                                                <P><img src="images/icon-1.png"><span>联系人：</span><i>谢志江</i></P>
+                                                <P><img src="images/icon-2.png"><span>服务热线：</span><i><a href="tel:13802636829">13802636829</a></i></P>
+                                                <P><img src="images/icon-3.png"><span>业务热线：</span><i><a href="tel:13802636829">13802636829</a>（谢生）</i></P>
+                                                <P><img src="images/icon-4.png"><span>公用邮箱：</span><i><a href="mailto:wanglina@stek.cn">wanglina@stek.cn</a></i></P>
+                                                <P><img src="images/icon-5.png"><span>公司地址：</span>
+                                                <i>广东省佛山市南海区丹灶镇金石工业 园生 态路10号索戴包装</i></P>
+                                           </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                        	<div class="text-center weixin-img"><img src="images/weixin.jpg"><p>扫一扫</p></div>
+                                        </div>
+                                    </div>                 					
+                                </div>
+                             </div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="footer text-center">
+    		<p>&copy;2016龙眼传媒有限公司ICP备12542346号 All Right Reserver   技术支持：<a href="#">魔方视维</a></p>
+    	</div>
+    </footer>    
+    <script>
+	$().ready(function() {
+		// validate signup form on keyup and submit
+		$("#myform").validate({
+			errorPlacement: function(error, element){
+	            var error_td = element.parent('div');
+	            error_td.find('label').hide();
+	            error_td.append(error);
+	        },
+	        submitHandler:function(form){
+	            ajaxpost('register_form', '', '', 'onerror') 
+	        },
+			rules: {
+				username: {
+					required: true,
+					minlength: 2,
+				},
+				telphone: {
+					required: true,
+					telphone: true,
+				},
+				email: {
+					required: true,
+					email: true,
+				},
+				qq:{
+					required:true,
+					qq:true
+				},
+				address:{
+					required:true,
+				},
+				topic: {
+					required: "#newsletter:checked",
+					minlength: 2
+				},
+				agree: "required"
+			},
+			messages: {				
+				username: {
+					required: "用户名不能为空！",
+					minlength: "用户名不能少于两个字"
+				},
+				telphone: {
+					required: "电话号码不能为空！",
+					telphone: "电话号码不正确！"
+				},
+				qq: {
+					required: "QQ号码不能为空！",
+					qq: "qq号码不正确！"
+				},
+				address: {
+					required: "地址不能为空！"
+				},
+				 email: {
+				    required: "请输入Email地址",
+				    email: "请输入正确的email地址"				    
+				   },
+			}
+		});
+		$.validator.addMethod("telphone", function(value, element, params) {
+			//5~10位数字和字母的组合
+			var phone = /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+			return this.optional(element) || phone.test(value); 
+		}, $.validator.format("电话号码不正确"));
+		$.validator.addMethod("qq", function(value, element, params) {
+			//5~10位数字和字母的组合
+			var phone = /^[1-9][0-9]{4,9}$/;
+			return this.optional(element) || phone.test(value); 
+		}, $.validator.format("QQ号码不正确"));
+		//code to hide topic selection, disable for demo
+		var newsletter = $("#newsletter");
+		// newsletter topics are optional, hide at first
+		var inital = newsletter.is(":checked");
+		var topics = $("#newsletter_topics")[inital ? "removeClass" : "addClass"]("gray");
+		var topicInputs = topics.find("input").attr("disabled", !inital);
+		// show when newsletter is checked
+		newsletter.click(function() {
+			topics[this.checked ? "removeClass" : "addClass"]("gray");
+			topicInputs.attr("disabled", !this.checked);
+		});
+	});
+	</script>
+	</body>
+	
+</html>
